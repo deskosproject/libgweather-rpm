@@ -1,12 +1,13 @@
 Name:           libgweather
 Version:        3.20.4
-Release:        1%{?dist}
+Release:        1.1%{?dist}
 Summary:        A library for weather information
 
 License:        GPLv2+
 URL:            https://wiki.gnome.org/Projects/LibGWeather
 Source0:        https://download.gnome.org/sources/libgweather/3.20/%{name}-%{version}.tar.xz
 Patch0:         libgweather-3.20.3-fix-includes.patch
+Patch1:         libgweather-3.20.4-update-metar-code-for-quito-ecuador.patch
 
 BuildRequires:  pkgconfig(geocode-glib-1.0)
 BuildRequires:  pkgconfig(gladeui-2.0)
@@ -37,6 +38,7 @@ developing applications that use %{name}.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure --disable-static --disable-gtk-doc
@@ -88,6 +90,10 @@ glib-compile-schemas %{_datadir}/glib-2.0/schemas &>/dev/null || :
 
 
 %changelog
+* Sun Jan 28 2018 Ricardo Arguello <rarguello@deskosproject.org> - 3.20.4-1.1
+- Update METAR code and location for Quito, Ecuador
+- Built for DeskOS
+
 * Tue Dec 27 2016 Kalev Lember <klember@redhat.com> - 3.20.4-1
 - Update to 3.20.4
 - Resolves: #1387009

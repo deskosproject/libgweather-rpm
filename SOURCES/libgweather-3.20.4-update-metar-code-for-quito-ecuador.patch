@@ -1,0 +1,16 @@
+diff -Naur libgweather-3.20.4.orig/data/Locations.xml.in libgweather-3.20.4/data/Locations.xml.in
+--- libgweather-3.20.4.orig/data/Locations.xml.in	2016-12-22 09:25:42.000000000 -0500
++++ libgweather-3.20.4/data/Locations.xml.in	2018-01-28 00:45:36.877354946 -0500
+@@ -10431,9 +10431,9 @@
+         <_name>Quito</_name>
+         <coordinates>-0.216667 -78.500000</coordinates>
+         <location>
+-          <name>Mariscal Sucre Airport</name>
+-          <code>SEQU</code>
+-          <coordinates>-0.150000 -78.483333</coordinates>
++          <name>Mariscal Sucre International Airport</name>
++          <code>SEQM</code>
++          <coordinates>-0.1133 -78.3586</coordinates>
+         </location>
+       </city>
+     </country>
